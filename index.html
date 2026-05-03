@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>町会会員登録フォーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>町会会員登録フォーム</h1>
+
+    <p class="description">
+      このフォームは、町会会員登録および町会からの連絡・管理のために使用します。
+      入力いただいた個人情報は、町会運営に必要な範囲でのみ使用します。
+    </p>
+
+    <form id="memberForm">
+      <label for="name">氏名 <span class="required">必須</span></label>
+      <input type="text" id="name" required />
+
+      <label for="kana">フリガナ <span class="required">必須</span></label>
+      <input type="text" id="kana" required />
+
+      <label for="address">住所 <span class="required">必須</span></label>
+      <textarea id="address" required></textarea>
+
+      <label for="tel">電話番号 <span class="required">必須</span></label>
+      <input type="tel" id="tel" required />
+
+      <label for="email">メールアドレス <span class="required">必須</span></label>
+      <input type="email" id="email" required />
+
+      <fieldset>
+        <legend>入会する目的 <span class="required">必須</span></legend>
+
+        <label class="radio-label">
+          <input type="radio" name="purpose" value="会員になりたい" required />
+          会員になりたい
+        </label>
+
+        <label class="radio-label">
+          <input type="radio" name="purpose" value="役員をやりたい" />
+          役員をやりたい
+        </label>
+
+        <label class="radio-label">
+          <input type="radio" name="purpose" value="イベントのみ参加したい" />
+          イベントのみ参加したい
+        </label>
+      </fieldset>
+
+      <div class="privacy-box">
+        <p>
+          入力いただいた個人情報は、町会会員登録、町会からの連絡、
+          町会活動の運営管理の目的で使用します。
+          取得した個人情報は、町会運営に必要な範囲でのみ利用します。
+        </p>
+      </div>
+
+      <label class="agree-label">
+        <input type="checkbox" id="privacyAgree" required />
+        個人情報の取り扱いに同意します
+      </label>
+
+      <button type="submit" id="submitButton">送信する</button>
+
+      <p id="message" class="message"></p>
+    </form>
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
