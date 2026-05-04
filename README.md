@@ -269,14 +269,3 @@ Apps Scriptのコードを修正した場合、保存だけではWebアプリに
 | `.github/workflows/deploy.yml` | GitHub Actions設定       |
 
 ---
-
-## 4. GitHubへ反映する
-
-```bash
-git status
-git add .
-git commit -m "サイト内容の修正"
-git push
-```
-
----
